@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Topics on Wmatrix World</title>
+    <link>https://wmatrix.github.io/topics/</link>
+    <description>Recent content in Topics on Wmatrix World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018. A.R. Reserved.</copyright>
+    <lastBuildDate>Tue, 09 Jan 2018 22:55:58 -0800</lastBuildDate>
+    
+	<atom:link href="https://wmatrix.github.io/topics/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Compute</title>
+      <link>https://wmatrix.github.io/topics/compute/</link>
+      <pubDate>Tue, 09 Jan 2018 22:55:58 -0800</pubDate>
+      
+      <guid>https://wmatrix.github.io/topics/compute/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vision</title>
+      <link>https://wmatrix.github.io/topics/vision/</link>
+      <pubDate>Tue, 09 Jan 2018 22:53:58 -0800</pubDate>
+      
+      <guid>https://wmatrix.github.io/topics/vision/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Wmatrix World</title>
-    <link>https://wmatrix.github.io/post/</link>
-    <description>Recent content in Posts on Wmatrix World</description>
+    <title>Compute on Wmatrix World</title>
+    <link>https://wmatrix.github.io/topics/compute/</link>
+    <description>Recent content in Compute on Wmatrix World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018. A.R. Reserved.</copyright>
     <lastBuildDate>Tue, 09 Jan 2018 22:55:58 -0800</lastBuildDate>
     
-	<atom:link href="https://wmatrix.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://wmatrix.github.io/topics/compute/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -45,15 +45,6 @@
  短时平均过零率
 表示一帧语音信号中语音数据穿过横轴（零电平）的次数。对于离散信号，如果相邻的采样值符号改变，则成为过零。短时平均过零率就是样本值符号改变的次数。
   浊音具有较低的频率，因而相对具有较低的过零率；清音具有较高的频率，因而具有较高的过零率。利用短时平均过零率，可以从背景噪声中找出语音信号。在背景噪声较小时，使用短时能量与短时平均幅度识别较为有效；而在背景噪声较大时，用短时过零率识别较为有效。</description>
-    </item>
-    
-    <item>
-      <title>Hello Hugo</title>
-      <link>https://wmatrix.github.io/post/first/</link>
-      <pubDate>Tue, 09 Jan 2018 22:53:58 -0800</pubDate>
-      
-      <guid>https://wmatrix.github.io/post/first/</guid>
-      <description> Hello Hugo  aaa bbb ccc  Hello World! </description>
     </item>
     
     <item>

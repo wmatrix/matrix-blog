@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="generator" content="Hugo 0.32.3" />
 
-  <title>Posts &middot; Wmatrix World</title>
+  <title>嵌入式视觉应用与方案 &middot; Wmatrix World</title>
 
   
   
@@ -36,8 +36,6 @@
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
 
   
-  
-  <link rel="alternate" type="application/rss+xml" title="Wmatrix World" href="https://wmatrix.github.io/post/index.xml" />
   
 
   
@@ -108,10 +106,6 @@
   <div class="pure-menu social">
   <ul class="pure-menu-list">
 
-    
-    <li class="pure-menu-item">
-      <a class="pure-menu-link" href="https://wmatrix.github.io/post/index.xml"><i class="fa fa-rss fa-fw"></i>RSS</a>
-    </li>
     
 
     
@@ -239,24 +233,143 @@
 
 
 <div class="header">
-  <h1>Posts</h1>
+  <h1>嵌入式视觉应用与方案</h1>
+  <h2></h2>
 </div>
 <div class="content">
-  
-  <h2>2018</h2>
-  <ul>
-  
-    <li><time>09 Jan 2018, 22:55</time> - <a href="https://wmatrix.github.io/post/%E9%BA%A6%E5%85%8B%E9%A3%8E%E9%98%B5%E5%88%97%E5%A3%B0%E6%BA%90%E5%AE%9A%E4%BD%8D%E7%A0%94%E7%A9%B6/">麦克风阵列声源定位研究</a></li>
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>09 Jan 2018, 22:53</time>
+  </div>
 
   
-    <li><time>09 Jan 2018, 22:53</time> - <a href="https://wmatrix.github.io/post/%E5%B5%8C%E5%85%A5%E5%BC%8F%E8%A7%86%E8%A7%89%E5%BA%94%E7%94%A8%E4%B8%8E%E6%96%B9%E6%A1%88/">嵌入式视觉应用与方案</a></li>
 
   
-    <li><time>09 Jan 2018, 22:53</time> - <a href="https://wmatrix.github.io/post/first/">Hello Hugo</a></li>
+  
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="https://wmatrix.github.io/topics/compute">compute</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-topic" href="https://wmatrix.github.io/topics/vision">vision</a>
+    
+  </div>
+  
+  
 
   
-  </ul>
   
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://wmatrix.github.io/tags/vision">vision</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://wmatrix.github.io/tags/embeded">embeded</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  
+
+<h2 id="嵌入式视觉解决方案">嵌入式视觉解决方案</h2>
+
+<p>软件与硬件全面结合的整体解决方案上游提供商：</p>
+
+<ul>
+<li>Intel Altera SoC FPGA： <a href="https://www.altera.com.cn/solutions/technology/intelligent-vision-and-video/overview.html">Intelligent Vision &amp; Video</a></li>
+<li>Xilinx All Programmable SoC： <a href="https://china.xilinx.com/applications/megatrends/video-vision.html">Embedded Vision reVision</a></li>
+</ul>
+
+<h3 id="视频监控">视频监控</h3>
+
+<ul>
+<li>Altera Cyclone IV FPGA： <a href="https://www.altera.com.cn/solutions/industry/industrial/applications/machine-vision/ind-video-surveillance.html">机器视觉方案</a></li>
+<li>Altera Cyclone V SoC : FPGA + ARM Cortex-A9</li>
+</ul>
+
+<h2 id="fpga与vhdl">FPGA与VHDL</h2>
+
+<ul>
+<li>模拟模型： 模拟软件，目前常用的VHDL模拟软件有ActiveHDL和Modelsim。</li>
+<li>综合模型： 综合软件，目前常用的综合软件有Synplicity公司的Synplify和SynplifyPro软件</li>
+</ul>
+
+<h3 id="vhdl仿真simulation">VHDL仿真Simulation</h3>
+
+<p>不适用真实硬件系统的情况下，使用计算机软件对VHDL设计的电路系统进行功能验证与测试</p>
+
+<ul>
+<li>功能仿真： 未经布线与适配</li>
+<li>时序仿真： 经过布线与适配后，芯片仿真</li>
+</ul>
+
+<h3 id="vhdl综合">VHDL综合</h3>
+
+<p>把VHDL描述转化为门级电路描述，设计过程中的每一步都可称为一个综合环节。</p>
+
+<ul>
+<li>自然语言综合：从自然语言转换到VHDL语言算法表示</li>
+<li>行为综合：从算法表示转换到寄存器传输级(Register Transport Level,RTL),即从行为域到结构域的综合。</li>
+<li>逻辑综合：RTL级表示转换到逻辑门的表示</li>
+<li>版图综合：从逻辑门表示转换到版图表示(ASIC设计)，或转换到FPGA的配置网表文件。有了版图信息就可以把芯片生产出来了。有了对应的配置文件，就可以使对应的FPGA变成具有专门功能的电路器件。</li>
+</ul>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="next">
+      <a href="https://wmatrix.github.io/post/first/">Hello Hugo</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="https://wmatrix.github.io/post/first/"><i class="fa fa-chevron-right"></i></a>
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'Your Disqus shortname';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
 </div>
 
 </div>

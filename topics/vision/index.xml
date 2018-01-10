@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vision on Wmatrix World</title>
+    <link>https://wmatrix.github.io/topics/vision/</link>
+    <description>Recent content in Vision on Wmatrix World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018. A.R. Reserved.</copyright>
+    <lastBuildDate>Tue, 09 Jan 2018 22:53:58 -0800</lastBuildDate>
+    
+	<atom:link href="https://wmatrix.github.io/topics/vision/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>嵌入式视觉应用与方案</title>
+      <link>https://wmatrix.github.io/post/%E5%B5%8C%E5%85%A5%E5%BC%8F%E8%A7%86%E8%A7%89%E5%BA%94%E7%94%A8%E4%B8%8E%E6%96%B9%E6%A1%88/</link>
+      <pubDate>Tue, 09 Jan 2018 22:53:58 -0800</pubDate>
+      
+      <guid>https://wmatrix.github.io/post/%E5%B5%8C%E5%85%A5%E5%BC%8F%E8%A7%86%E8%A7%89%E5%BA%94%E7%94%A8%E4%B8%8E%E6%96%B9%E6%A1%88/</guid>
+      <description> 嵌入式视觉解决方案 软件与硬件全面结合的整体解决方案上游提供商：
+ Intel Altera SoC FPGA： Intelligent Vision &amp;amp; Video Xilinx All Programmable SoC： Embedded Vision reVision  视频监控  Altera Cyclone IV FPGA： 机器视觉方案 Altera Cyclone V SoC : FPGA + ARM Cortex-A9  FPGA与VHDL  模拟模型： 模拟软件，目前常用的VHDL模拟软件有ActiveHDL和Modelsim。 综合模型： 综合软件，目前常用的综合软件有Synplicity公司的Synplify和SynplifyPro软件  VHDL仿真Simulation 不适用真实硬件系统的情况下，使用计算机软件对VHDL设计的电路系统进行功能验证与测试
+ 功能仿真： 未经布线与适配 时序仿真： 经过布线与适配后，芯片仿真  VHDL综合 把VHDL描述转化为门级电路描述，设计过程中的每一步都可称为一个综合环节。
+ 自然语言综合：从自然语言转换到VHDL语言算法表示 行为综合：从算法表示转换到寄存器传输级(Register Transport Level,RTL),即从行为域到结构域的综合。 逻辑综合：RTL级表示转换到逻辑门的表示 版图综合：从逻辑门表示转换到版图表示(ASIC设计)，或转换到FPGA的配置网表文件。有了版图信息就可以把芯片生产出来了。有了对应的配置文件，就可以使对应的FPGA变成具有专门功能的电路器件。  </description>
+    </item>
+    
+  </channel>
+</rss>
