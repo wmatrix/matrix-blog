@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Test on Wmatrix World</title>
-    <link>https://wmatrix.github.io/tags/test/</link>
-    <description>Recent content in Test on Wmatrix World</description>
+    <title>Algorithm on Wmatrix World</title>
+    <link>https://wmatrix.github.io/tags/algorithm/</link>
+    <description>Recent content in Algorithm on Wmatrix World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018. A.R. Reserved.</copyright>
     <lastBuildDate>Thu, 11 Jan 2018 11:53:58 -0800</lastBuildDate>
     
-	<atom:link href="https://wmatrix.github.io/tags/test/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://wmatrix.github.io/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -23,15 +23,6 @@
 通过对比各自算法在PC环境和Hi3519v101环境下的检测时间与检测准确率两项指标来评价算法的可行性。
 测试结论 详细的测试步骤与输出信息见下面的测试环境结果，这里对这些信息进行简单的总结如下：
    算法/性能 PC Time(ms) 3519v101 Time(ms) PC Correct 3519v101 Correct     SeetaFaceEngine-FaceDet 235 3280 6 in 6 6 in 6   PICO - FaceDetetion 17 123 4 in 6 4 in 6   Opencv3.2 - HaarFrontalFace 170 2144 2 in 6 2 in 6   Opencv3.2 - LBPFrontalFace 70 213 1 in 6 1 in 6    注：PICO的性能在minsize和maxsize参数不同时，相差很大：</description>
-    </item>
-    
-    <item>
-      <title>Hello Hugo</title>
-      <link>https://wmatrix.github.io/post/first/</link>
-      <pubDate>Tue, 09 Jan 2018 22:53:58 -0800</pubDate>
-      
-      <guid>https://wmatrix.github.io/post/first/</guid>
-      <description>Hello Hugo  aaa bbb ccc  Markdowm Usage 使用markdowm的语法添加图片和引用的方法：</description>
     </item>
     
   </channel>

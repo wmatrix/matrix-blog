@@ -5,7 +5,7 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="generator" content="Hugo 0.32.3" />
+  <meta name="generator" content="Hugo 0.32.4" />
 
   <title>Wmatrix World</title>
 
@@ -247,6 +247,71 @@
   
     <article>
   <header>
+    <h2><a href="https://wmatrix.github.io/post/facedetect%E7%AE%97%E6%B3%95%E5%AF%B9%E6%AF%94%E6%B5%8B%E8%AF%95/">FaceDetect算法对比测试</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>11 Jan 2018, 11:53</time>
+  </div>
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="https://wmatrix.github.io/topics/compute">compute</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-topic" href="https://wmatrix.github.io/topics/vision">vision</a>
+    
+  </div>
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://wmatrix.github.io/tags/vision">vision</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://wmatrix.github.io/tags/test">test</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://wmatrix.github.io/tags/facedetect">facedetect</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://wmatrix.github.io/tags/algorithm">algorithm</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  测试说明 本对比测试使用不同的人脸检测算法对同样的两张图片样本进行检测：分别为单人和多人图片。
+其中单人图片0_1_1.jpg大小为：550*694，多人图片children.jpg大小为：660*421.
+通过对比各自算法在PC环境和Hi3519v101环境下的检测时间与检测准确率两项指标来评价算法的可行性。
+测试结论 详细的测试步骤与输出信息见下面的测试环境结果，这里对这些信息进行简单的总结如下：
+   算法/性能 PC Time(ms) 3519v101 Time(ms) PC Correct 3519v101 Correct     SeetaFaceEngine-FaceDet 235 3280 6 in 6 6 in 6   PICO - FaceDetetion 17 123 4 in 6 4 in 6   Opencv3.2 - HaarFrontalFace 170 2144 2 in 6 2 in 6   Opencv3.2 - LBPFrontalFace 70 213 1 in 6 1 in 6    注：PICO的性能在minsize和maxsize参数不同时，相差很大：
+  </p>
+
+  
+  <footer>
+    <a href="https://wmatrix.github.io/post/facedetect%E7%AE%97%E6%B3%95%E5%AF%B9%E6%AF%94%E6%B5%8B%E8%AF%95/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://wmatrix.github.io/post/%E9%BA%A6%E5%85%8B%E9%A3%8E%E9%98%B5%E5%88%97%E5%A3%B0%E6%BA%90%E5%AE%9A%E4%BD%8D%E7%A0%94%E7%A9%B6/">麦克风阵列声源定位研究</a></h2>
 
     <div class="post-meta">
@@ -360,7 +425,7 @@
   </header>
 
   <p>
-   Hello Hugo  aaa bbb ccc  Hello World! 
+  Hello Hugo  aaa bbb ccc  Markdowm Usage 使用markdowm的语法添加图片和引用的方法：
   </p>
 
   

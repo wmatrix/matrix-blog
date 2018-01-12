@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.32.4" />
+
+  <title>FaceDetect算法对比测试 &middot; Wmatrix World</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://wmatrix.github.io/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://wmatrix.github.io/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="https://wmatrix.github.io/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/androidstudio.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="https://wmatrix.github.io/img/favicon.ico" type="image/x-icon" />
+
+  
+    <link rel="stylesheet" href="https://wmatrix.github.io/css/my.css">
+  
+  
+    <script src="https://wmatrix.github.io/js/my.js"></script>
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="https://wmatrix.github.io/">WmatriX</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://wmatrix.github.io/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://wmatrix.github.io/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://wmatrix.github.io/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://wmatrix.github.io/contact/"><i class='fa fa-phone fa-fw'></i>Contact</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://plus.google.com/+*" target="_blank"><i class="fa fa-google-plus-square fa-fw"></i>Google+</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://youtube.com/user/*" target="_blank"><i class="fa fa-youtube-square fa-fw"></i>YouTube</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://linkedin.com/in/*" target="_blank"><i class="fa fa-linkedin-square fa-fw"></i>LinkedIn</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://news.ycombinator.com/user?id=%2a" target="_blank"><i class="fa fa-hacker-news fa-fw"></i>Hacker News</a>
+    </li>
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/wmatrix" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://stackoverflow.com/users/*" target="_blank"><i class="fa fa-stack-overflow fa-fw"></i>Stack Overflow</a>
+    </li>
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://serverfault.com/users/*" target="_blank"><i class="fa fa-server fa-fw"></i>Server Fault</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://keybase.io/*" target="_blank"><i class="fa fa-key fa-fw"></i>Keybase</a>
+    </li>
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2018. A.R. Reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>FaceDetect算法对比测试</h1>
+  <h2></h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>11 Jan 2018, 11:53</time>
+  </div>
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="https://wmatrix.github.io/topics/compute">compute</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-topic" href="https://wmatrix.github.io/topics/vision">vision</a>
+    
+  </div>
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://wmatrix.github.io/tags/vision">vision</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://wmatrix.github.io/tags/test">test</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://wmatrix.github.io/tags/facedetect">facedetect</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://wmatrix.github.io/tags/algorithm">algorithm</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  
+
+<h2 id="测试说明">测试说明</h2>
+
+<p>本对比测试使用不同的人脸检测算法对同样的两张图片样本进行检测：分别为单人和多人图片。</p>
+
+<p>其中单人图片0_1_1.jpg大小为：550*694，多人图片children.jpg大小为：660*421.</p>
+
+<p>通过对比各自算法在PC环境和Hi3519v101环境下的检测时间与检测准确率两项指标来评价算法的可行性。</p>
+
+<h2 id="测试结论">测试结论</h2>
+
+<p>详细的测试步骤与输出信息见下面的测试环境结果，这里对这些信息进行简单的总结如下：</p>
+
+<table>
+<thead>
+<tr>
+<th>算法/性能</th>
+<th>PC Time(ms)</th>
+<th>3519v101 Time(ms)</th>
+<th>PC Correct</th>
+<th>3519v101 Correct</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>SeetaFaceEngine-FaceDet</td>
+<td>235</td>
+<td>3280</td>
+<td>6 in 6</td>
+<td>6 in 6</td>
+</tr>
+
+<tr>
+<td>PICO - FaceDetetion</td>
+<td>17</td>
+<td>123</td>
+<td>4 in 6</td>
+<td>4 in 6</td>
+</tr>
+
+<tr>
+<td>Opencv3.2 - HaarFrontalFace</td>
+<td>170</td>
+<td>2144</td>
+<td>2 in 6</td>
+<td>2 in 6</td>
+</tr>
+
+<tr>
+<td>Opencv3.2 - LBPFrontalFace</td>
+<td>70</td>
+<td>213</td>
+<td>1 in 6</td>
+<td>1 in 6</td>
+</tr>
+</tbody>
+</table>
+
+<p>注：PICO的性能在minsize和maxsize参数不同时，相差很大：</p>
+
+<ul>
+<li>min:16/max:200：PC 134ms, 3519v101 758ms</li>
+<li>min:50/max:200: PC 17ms,  3519v101 123ms</li>
+</ul>
+
+<p>考虑到样本只有非常少的两个，因此上述测试数据不具有显著的性能指标代表性，只能是作为简单的参考数据。
+为了得到更准确可靠的性能测试数据，可以通过提供大量的测试样本，比如规模上千的图片，通过脚本自动化工具对上述算法Demo进行计算测试，求取性能平均值即可（也就是标准的人脸检测测试集）。</p>
+
+<h2 id="对比环境-ubuntu16-04-vm-core-tm-i5-4590-3-30ghz-3gb-ram">对比环境：Ubuntu16.04(VM) + Core&trade;i5-4590@ 3.30GHz + 3GB RAM</h2>
+
+<h3 id="seetafaceengine-facedetection">SeetaFaceEngine - FaceDetection</h3>
+
+<pre><code class="language-bash">lzh@ubuntu:~/build$ ./facedet_test ../data/0_1_1.jpg ../model/seeta_fd_frontal_v1.0.bin 
+Detections takes 0.23521 seconds 
+OpenMP is used.
+SSE is used.
+Image size (wxh): 550x694
+
+lzh@ubuntu:~/build$ ./facedet_test ../data/children.jpg ../model/seeta_fd_frontal_v1.0.bin 
+Detections takes 0.233733 seconds 
+OpenMP is used.
+SSE is used.
+Image size (wxh): 660x421
+</code></pre>
+
+<h3 id="pico-facedetection-objectdetection">PICO - FaceDetection/ObjectDetection</h3>
+
+<pre><code class="language-bash">lzh@ubuntu:~$ ./picodetect_x86 ./facefinder ../data/0_1_1.jpg 
+PICO Detections takes 0.118 seconds 
+Detect Face num: 1
+ 0 Face Rect:  x:153  y:214 w:215 h:215
+ 
+lzh@ubuntu:~$ ./picodetect_x86 ./facefinder ../data/children.jpg 
+PICO Detections takes 0.134 seconds 
+Detect Face num: 3
+ 0 Face Rect:  x:532  y:113 w:52 h:52
+ 1 Face Rect:  x:72  y:122 w:46 h:46
+ 2 Face Rect:  x:133  y:91 w:56 h:56
+</code></pre>
+
+<h3 id="opencv3-2-haar-frontalface-lbp-frontalface">OpenCV3.2 - Haar FrontalFace/LBP FrontalFace</h3>
+
+<h4 id="haar-frontalface-cascade">Haar FrontalFace Cascade</h4>
+
+<pre><code class="language-bash">$ ./cvfacedetect_x86 --cascade=&quot;./data/haarcascades/haarcascade_frontalface_alt.xml&quot; --scale=1.3 ../3519v101_build/data/0_1_1.jpg
+WARNING: Could not load classifier cascade for nested objects
+Detecting face(s) in ../3519v101_build/data/0_1_1.jpg
+detection time = 121.557 ms, faces num = 1
+  face[0] circle center x = 261, y = 336, radius = 111
+  
+$ ./cvfacedetect_x86 --cascade=&quot;./data/haarcascades/haarcascade_frontalface_alt.xml&quot; --scale=1.3 ../3519v101_build/data/children.jpg
+WARNING: Could not load classifier cascade for nested objects
+Detecting face(s) in ../3519v101_build/data/children.jpg
+detection time = 167.765 ms, faces num = 2
+  face[0] circle center x = 558, y = 141, radius = 25
+  face[1] circle center x = 99, y = 147, radius = 26
+</code></pre>
+
+<h4 id="lbp-frontalface-cascade">LBP FrontalFace Cascade</h4>
+
+<pre><code class="language-bash">$ ./cvfacedetect_x86 --cascade=&quot;./data/lbpcascades/lbpcascade_frontalface.xml&quot; --scale=1.3 ../3519v101_build/data/children.jpg
+WARNING: Could not load classifier cascade for nested objects
+Detecting face(s) in ../3519v101_build/data/children.jpg
+detection time = 40.8521 ms, faces num = 1
+  face[0] circle center x = 557, y = 138, radius = 24
+  
+$ ./cvfacedetect_x86 --cascade=&quot;./data/lbpcascades/lbpcascade_frontalface.xml&quot; --scale=1.3 ../3519v101_build/data/0_1_1.jpg 
+WARNING: Could not load classifier cascade for nested objects
+Detecting face(s) in ../3519v101_build/data/0_1_1.jpg
+detection time = 50.6144 ms, faces num = 1
+  face[0] circle center x = 268, y = 330, radius = 114
+
+</code></pre>
+
+<h2 id="测试环境-hi3519v101-256mb-ram">测试环境：Hi3519v101 + 256MB RAM</h2>
+
+<p>辅助使用opencv3.2进行图像的读取写入等操作。</p>
+
+<h3 id="seetafaceengine-facedetection-1">SeetaFaceEngine - FaceDetection</h3>
+
+<pre><code class="language-bash">/nfsroot/faceDetect/3519v101_build # ./facedetect_test ./data/0_1_1.jpg ./model/seeta_fd_frontal_v1.0.bin 
+Detections takes 3.535 seconds 
+OpenMP is not used. 
+SSE is not used.
+Image size (wxh): 550x694
+Detect Face num: 1
+ face[0] pos: x = 158,y = 216,w = 224,h = 224
+</code></pre>
+
+<p><img src="https://wmatrix.github.io/img/facedetect/0_1_1-seeta-fd.jpg" alt="检测结果" /></p>
+
+<pre><code class="language-bash">/nfsroot/faceDetect/3519v101_build # ./facedetect_test ./data/children.jpg  ./model/seeta_fd_frontal_v1.0.bin 
+Detections takes 4.128 seconds 
+OpenMP is not used. 
+SSE is not used.
+Image size (wxh): 660x421
+Detect Face num: 5
+ face[0] pos: x = 533,y = 115,w = 48,h = 48
+ face[1] pos: x = 75,y = 125,w = 47,h = 47
+ face[2] pos: x = 271,y = 77,w = 51,h = 51
+ face[3] pos: x = 348,y = 115,w = 38,h = 38
+ face[4] pos: x = 430,y = 76,w = 53,h = 53
+</code></pre>
+
+<p><img src="https://wmatrix.github.io/img/facedetect/children-seeta-fd.jpg" alt="检测结果" /></p>
+
+<h3 id="pico-facedetection-objectdetection-1">PICO - FaceDetection/ObjectDetection</h3>
+
+<pre><code class="language-bash">/nfsroot/faceDetect/PICO_FaceDetect # ./picodetect ./facefinder ../3519v101_build/data/0_1_1.jpg 
+PICO Detections takes 0.705 seconds 
+Detect Face num: 1
+ 0 Face Rect:  x:153  y:214 w:215 h:215
+</code></pre>
+
+<p><img src="https://wmatrix.github.io/img/facedetect/0_1_1-pico-fd.jpg" alt="检测结果" /></p>
+
+<pre><code class="language-bash">/nfsroot/faceDetect/PICO_FaceDetect # ./picodetect ./facefinder ../3519v101_build/data/children.jpg 
+PICO Detections takes 0.758 seconds 
+Detect Face num: 3
+ 0 Face Rect:  x:532  y:113 w:52 h:52
+ 1 Face Rect:  x:72  y:122 w:46 h:46
+ 2 Face Rect:  x:133  y:91 w:56 h:56
+</code></pre>
+
+<p><img src="https://wmatrix.github.io/img/facedetect/children-pico-fd.jpg" alt="检测结果" /></p>
+
+<h3 id="opencv-3-2-haar-lbp-cascade">OpenCV 3.2 - Haar/LBP Cascade</h3>
+
+<h4 id="haar-frontalface-alt">Haar FrontalFace_Alt</h4>
+
+<pre><code class="language-bash">$ ./cvfacedetect_3519v101 --cascade=&quot;./data/haarcascades/haarcascade_frontalface_alt.xml&quot; --scale=1.3 ../3519v101_build/data/0_1_1.jpg
+WARNING: Could not load classifier cascade for nested objects
+Detecting face(s) in ../3519v101_build/data/0_1_1.jpg
+detection time = 2520.52 ms, faces num = 1
+  face[0] circle center x = 261, y = 336, radius = 111
+</code></pre>
+
+<p><img src="https://wmatrix.github.io/img/facedetect/0_1_1-cvhaar-fd.jpg" alt="检测结果" /></p>
+
+<pre><code class="language-bash">$ ./cvfacedetect_3519v101 --cascade=&quot;./data/haarcascades/haarcascade_frontalface_alt.xml&quot; --scale=1.3 ../3519v101_build/data/children.jpg
+WARNING: Could not load classifier cascade for nested objects
+Detecting face(s) in ../3519v101_build/data/children.jpg
+detection time = 2144.5 ms, faces num = 2
+  face[0] circle center x = 99, y = 147, radius = 26
+  face[1] circle center x = 558, y = 141, radius = 25
+</code></pre>
+
+<p><img src="https://wmatrix.github.io/img/facedetect/children-cvhaar-fd.jpg" alt="检测结果" /></p>
+
+<h4 id="lbp-frontalface">LBP FrontalFace</h4>
+
+<pre><code class="language-bash">$ ./cvfacedetect_3519v101 --cascade=&quot;./data/lbpcascades/lbpcascade_frontalface.xml&quot; --scale=1.3 ../3519v101_build/data/0_1_1.jpg 
+WARNING: Could not load classifier cascade for nested objects
+Detecting face(s) in ../3519v101_build/data/0_1_1.jpg
+detection time = 268.299 ms, faces num = 1
+  face[0] circle center x = 268, y = 330, radius = 114
+</code></pre>
+
+<p><img src="https://wmatrix.github.io/img/facedetect/0_1_1-cvlbp-fd.jpg" alt="检测结果" /></p>
+
+<pre><code class="language-bash">$ ./cvfacedetect_3519v101 --cascade=&quot;./data/lbpcascades/lbpcascade_frontalface.xml&quot; --scale=1.3 ../3519v101_build/data/children.jpg 
+WARNING: Could not load classifier cascade for nested objects
+Detecting face(s) in ../3519v101_build/data/children.jpg
+detection time = 213.388 ms, faces num = 1
+  face[0] circle center x = 557, y = 138, radius = 24
+</code></pre>
+
+<p><img src="https://wmatrix.github.io/img/facedetect/children-cvlbp-fd.jpg" alt="检测结果" /></p>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://wmatrix.github.io/post/%E9%BA%A6%E5%85%8B%E9%A3%8E%E9%98%B5%E5%88%97%E5%A3%B0%E6%BA%90%E5%AE%9A%E4%BD%8D%E7%A0%94%E7%A9%B6/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://wmatrix.github.io/post/%E9%BA%A6%E5%85%8B%E9%A3%8E%E9%98%B5%E5%88%97%E5%A3%B0%E6%BA%90%E5%AE%9A%E4%BD%8D%E7%A0%94%E7%A9%B6/">麦克风阵列声源定位研究</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'Your Disqus shortname';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</div>
+
+</div>
+</div>
+<script src="https://wmatrix.github.io/js/ui.js"></script>
+
+
+
+
+
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="\/\/analytics.example.com\/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId',  2 ]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//analytics.example.com/piwik.php?idsite=2" style="border:0;" alt="" /></p></noscript>
+
+
+
+</body>
+</html>
+

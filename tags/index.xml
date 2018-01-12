@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018. A.R. Reserved.</copyright>
-    <lastBuildDate>Tue, 09 Jan 2018 22:53:58 -0800</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jan 2018 11:53:58 -0800</lastBuildDate>
     
 	<atom:link href="https://wmatrix.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Algorithm</title>
+      <link>https://wmatrix.github.io/tags/algorithm/</link>
+      <pubDate>Thu, 11 Jan 2018 11:53:58 -0800</pubDate>
+      
+      <guid>https://wmatrix.github.io/tags/algorithm/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Demo</title>
@@ -27,6 +36,15 @@
       <pubDate>Tue, 09 Jan 2018 22:53:58 -0800</pubDate>
       
       <guid>https://wmatrix.github.io/tags/embeded/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Facedetect</title>
+      <link>https://wmatrix.github.io/tags/facedetect/</link>
+      <pubDate>Thu, 11 Jan 2018 11:53:58 -0800</pubDate>
+      
+      <guid>https://wmatrix.github.io/tags/facedetect/</guid>
       <description></description>
     </item>
     
@@ -51,7 +69,7 @@
     <item>
       <title>Test</title>
       <link>https://wmatrix.github.io/tags/test/</link>
-      <pubDate>Tue, 09 Jan 2018 22:53:58 -0800</pubDate>
+      <pubDate>Thu, 11 Jan 2018 11:53:58 -0800</pubDate>
       
       <guid>https://wmatrix.github.io/tags/test/</guid>
       <description></description>
@@ -60,7 +78,7 @@
     <item>
       <title>Vision</title>
       <link>https://wmatrix.github.io/tags/vision/</link>
-      <pubDate>Tue, 09 Jan 2018 22:53:58 -0800</pubDate>
+      <pubDate>Thu, 11 Jan 2018 11:53:58 -0800</pubDate>
       
       <guid>https://wmatrix.github.io/tags/vision/</guid>
       <description></description>
