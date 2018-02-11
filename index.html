@@ -247,6 +247,64 @@
   
     <article>
   <header>
+    <h2><a href="https://wmatrix.github.io/post/orangepi-pc-plus-note/">Orangepi Pc Plus 研究笔记</a></h2>
+
+    <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>11 Feb 2018, 11:27</time>
+  </div>
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="https://wmatrix.github.io/topics/iot">iot</a>
+    
+  </div>
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://wmatrix.github.io/tags/iot">iot</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://wmatrix.github.io/tags/orangepi">orangepi</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  </header>
+
+  <p>
+  本文主要是对在使用OrangePi PC Plus开发板的过程中遇到的一些问题的记录。
+查看系统信息 由于移植的系统都是进行过裁剪的，所以很多在Linux中常用的工具命令可能都被删除掉了，从而查看一些系统的信息方式需要另找工具或者入口。特别是对于Android系统的使用上更是如此。以下是一些额外的途径去获取需要的系统信息。
+ 内核版本信息：uname 命令不存在时，可用 cat /proc/version 内存使用信息：free 命令不存在时，可用 cat /proc/meminfo 网络接口信息：ifconfig 命令不可用时, 可用 netcfg命令，或者 ip addr命令
+root@dolphin-fvd-p1:/ # ip addr 1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 16436 qdisc noqueue state UNKNOWN link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00 inet 127.0.0.1/8 scope host lo inet6 ::1/128 scope host valid_lft forever preferred_lft forever 2: eth0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc pfifo_fast state UP qlen 1000 link/ether 02:ae:79:67:9b:30 brd ff:ff:ff:ff:ff:ff inet 192.168.0.180/24 brd 192.168.0.255 scope global eth0 inet6 fe80::ae:79ff:fe67:9b30/64 scope link valid_lft forever preferred_lft forever 3: tunl0: &lt;NOARP&gt; mtu 1480 qdisc noop state DOWN link/ipip 0.
+  </p>
+
+  
+  <footer>
+    <a href="https://wmatrix.github.io/post/orangepi-pc-plus-note/">Read more<i class="fa fa-angle-double-right fa-fw"></i></a>
+  </footer>
+  
+</article>
+
+  
+    <article>
+  <header>
     <h2><a href="https://wmatrix.github.io/post/facedetect%E7%AE%97%E6%B3%95%E5%AF%B9%E6%AF%94%E6%B5%8B%E8%AF%95/">FaceDetect算法对比测试</a></h2>
 
     <div class="post-meta">

@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://wmatrix.github.io/post/orangepi-pc-plus-note/</loc>
+    <lastmod>2018-02-11T11:27:31+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wmatrix.github.io/post/facedetect%E7%AE%97%E6%B3%95%E5%AF%B9%E6%AF%94%E6%B5%8B%E8%AF%95/</loc>
     <lastmod>2018-01-11T11:53:58-08:00</lastmod>
   </url>
@@ -58,8 +63,26 @@
   </url>
   
   <url>
+    <loc>https://wmatrix.github.io/tags/iot/</loc>
+    <lastmod>2018-02-11T11:27:31+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://wmatrix.github.io/topics/iot/</loc>
+    <lastmod>2018-02-11T11:27:31+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://wmatrix.github.io/tags/orangepi/</loc>
+    <lastmod>2018-02-11T11:27:31+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://wmatrix.github.io/post/</loc>
-    <lastmod>2018-01-11T11:53:58-08:00</lastmod>
+    <lastmod>2018-02-11T11:27:31+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -94,20 +117,20 @@
   </url>
   
   <url>
-    <loc>https://wmatrix.github.io/topics/vision/</loc>
-    <lastmod>2018-01-11T11:53:58-08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://wmatrix.github.io/tags/vision/</loc>
     <lastmod>2018-01-11T11:53:58-08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://wmatrix.github.io/</loc>
+    <loc>https://wmatrix.github.io/topics/vision/</loc>
     <lastmod>2018-01-11T11:53:58-08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://wmatrix.github.io/</loc>
+    <lastmod>2018-02-11T11:27:31+08:00</lastmod>
     <priority>0</priority>
   </url>
   
