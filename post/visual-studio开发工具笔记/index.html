@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.32.4" />
+
+  <title>Visual Studio开发工具笔记 &middot; Wmatrix World</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://wmatrix.github.io/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://wmatrix.github.io/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="https://wmatrix.github.io/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/androidstudio.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="https://wmatrix.github.io/img/favicon.ico" type="image/x-icon" />
+
+  
+    <link rel="stylesheet" href="https://wmatrix.github.io/css/my.css">
+  
+  
+    <script src="https://wmatrix.github.io/js/my.js"></script>
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="https://wmatrix.github.io/">WmatriX</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://wmatrix.github.io/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://wmatrix.github.io/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://wmatrix.github.io/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://wmatrix.github.io/contact/"><i class='fa fa-phone fa-fw'></i>Contact</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://plus.google.com/+*" target="_blank"><i class="fa fa-google-plus-square fa-fw"></i>Google+</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://youtube.com/user/*" target="_blank"><i class="fa fa-youtube-square fa-fw"></i>YouTube</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://linkedin.com/in/*" target="_blank"><i class="fa fa-linkedin-square fa-fw"></i>LinkedIn</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://news.ycombinator.com/user?id=%2a" target="_blank"><i class="fa fa-hacker-news fa-fw"></i>Hacker News</a>
+    </li>
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/wmatrix" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://stackoverflow.com/users/*" target="_blank"><i class="fa fa-stack-overflow fa-fw"></i>Stack Overflow</a>
+    </li>
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://serverfault.com/users/*" target="_blank"><i class="fa fa-server fa-fw"></i>Server Fault</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://keybase.io/*" target="_blank"><i class="fa fa-key fa-fw"></i>Keybase</a>
+    </li>
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2018. A.R. Reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>Visual Studio开发工具笔记</h1>
+  <h2></h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>08 Mar 2018, 20:37</time>
+  </div>
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-folder fa-fw"></i>
+    
+      <a class="post-taxonomy-topic" href="https://wmatrix.github.io/topics/develop">develop</a>
+    
+  </div>
+  
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://wmatrix.github.io/tags/develop">develop</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://wmatrix.github.io/tags/ide">ide</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  
+
+<p>最近使用Visual Studio 2017进行项目的开发，不得不为微软的这款IDE点赞一下，确实提高了工作了效率和减轻了开发负担。不过因为并不熟练，在使用的过程中难免遇上一些问题，本文对于遇到的这些问题及对应的解决方案进行记录，分享与以备后查。</p>
+
+<p>其实在解决问题时，很多时候也是通过百度搜索来寻求答案的，只是发现很多的结果都是复制粘贴的，此外也比较过时，因此自行总结这个过程也是利己利人的必要工作。我将这些笔记称之为Better Practice系列。</p>
+
+<h2 id="bp-项目组织">BP-项目组织</h2>
+
+<h3 id="solution-project">Solution &amp; Project</h3>
+
+<p>以前虽然也接触过VS的Solution和Project的概念，但是并没有实际在项目中应用过，因而也就没什么印象。但是最近半年多的VS开发经历让我对这两个概念有了一种相见恨晚的感觉，觉得非常的实用。之前在Linux平台下的开发主要实用Makefile来构建管理项目，对于多个项目的管理和依赖组织非常灵活，要求对Makefile非常熟练方能安全实现这一目标，但是在VS中，Solution，Project和Reference的引入不仅让项目组织一目了然，而且并不需要开发者学习掌握太多的技术基础就能做到，非常高效。</p>
+
+<p>随便找一个开源的项目如dlib,opencv,opencl等，打开VS的解决方案，就可以直观地管理所有的项目资源，不限于代码文件，项目配置，资源文件，平台部署等等，如图：</p>
+
+<p><img src="https://wmatrix.github.io/img/vs/solutions.png" alt="openCL Samples VS13" /></p>
+
+<p>如果我们用Makefile来编写管理的话，将会是很长很长的规则，因此可视化GUI有其很有用的一方面。这里的要点是：</p>
+
+<ol>
+<li>任何项目都是某个问题的解决方案，所以解决方案是总纲</li>
+<li>一个解决方案可以由多个项目组成，这些项目组成一个统一完整的整体</li>
+<li>解决方案内的项目之间可以相互引用，VS中甚至可以创建共享项目来实现目标，库，也可以共享代码</li>
+<li>项目的目标可以是一个静态库，动态库，可执行文件，或者只是一份共享代码，从而可以跨平台引用维护</li>
+<li>你可以随时在解决方案中新建项目进行测试，或者是添加现有项目进行管理，或者是移除无用的项目</li>
+</ol>
+
+<h3 id="版本管理">版本管理</h3>
+
+<p>一个没有版本管理的项目是不能成为一个可持续和产品级应用的，熟悉版本管理的流程和至少一个版本管理工具是每一个软件开发人员的必需技能之一。日常工作开发中使用最广的版本管理工具有svn和git, 它们刚好代表集中式和分布式两类版本管理开发流程，各有利弊。最近几年由于Github的流行，git版本工具好像越来越需要程序员进行掌握使用了。</p>
+
+<p>VS中集成了源码版本管理流程需要的一整套操作，你可以无缝简单地整合现有的版本管理工具，或者是初始化版本库进行版本管理开发。在VS的右下角位置有版本管理的初始化，分支和修改记录操作及信息，你可以直接点击进行查看和操作，如图：
+<img src="https://wmatrix.github.io/img/vs/version-git.jpg" alt="git" /></p>
+
+<p>点击分支名称后，可以查看当前分支对应的历史提交记录，如图：
+<img src="https://wmatrix.github.io/img/vs/version-git-log.jpg" alt="git-log" /></p>
+
+<p>更多的操作可以通过团队资源管理器进行操作：</p>
+
+<p><img src="https://wmatrix.github.io/img/vs/team-resource.jpg" alt="team resource" /></p>
+
+<h3 id="团队开发">团队开发</h3>
+
+<p>在大型项目的开发中，团队分工协作是项目成功完成的基础。除了版本管理可以保证项目开发的可回溯性和代码安全性外，团队协作开发的同步合并和代码审核工作也是保证项目质量和进度的必须工作。VS工具集成了团队协作开发的流程，你可以登录自己的Microsoft账户来同步自身的个性化设置，项目信息和版本管理，你还可以连接到Visual Studio Team Services来实现自动构建和发布流程，你需要的全部都提供好了：
+<img src="https://wmatrix.github.io/img/vs/team-dev.jpg" alt="team" /></p>
+
+<p>团队开发的要点是：</p>
+
+<ol>
+<li>首先创建你的开发账号，你可以使用Microsoft旗下的任何账号信息，如hotmail邮箱账号，outlook邮箱账号，azure账号等等，登录VS进行同步</li>
+<li>加入项目开发团队，分配好团队各个开发成员的角色和工作任务，这些都可以在Team Services中完成</li>
+<li>使用版本管理团队的代码提交，审核代码质量，自动构建确保代码的完整性和可用性</li>
+<li>Visual Studio Team Services是与GitHub类似的开发服务，只要熟悉GitHub的流程，那么对于Team Services肯定能快速上手，而且它可能更强大和易用，毕竟大部分功能是需要购买的</li>
+</ol>
+
+<p><img src="https://wmatrix.github.io/img/vs/team-services.jpg" alt="team services" /></p>
+
+<h2 id="bp-项目配置">BP-项目配置</h2>
+
+<h3 id="配置管理器-配置与平台">配置管理器：配置与平台</h3>
+
+<p>项目开发一般而言会涉及到debug和release两种配置，分别用来作为项目调试和产品发布的配置使用；此外对于当前越来越多的异构计算平台，项目可能需要针对不同的平台分别进行特定的优化或者实现，因而需要针对不同的平台进行构建，当前最常见的平台有win32(x86),x64,arm,分别对应PC和移动端或者嵌入式端的计算平台。</p>
+
+<p>VS中的配置管理器模块完美地解决了项目配置和平台管理的这一问题，但是在使用时有一些注意事项或者说是不良习惯需要规范。关于Debug和Release两类配置：</p>
+
+<ul>
+<li>Debug配置和Release配置中的各项属性是完全独立的，因此包含目录，库目录，库链接，环境参数，工作目录等等，你需要配置两次来实现构建</li>
+<li>Debug配置构建中使用的链接库应该也是debug构建出来的，Release配置构建中使用的链接库应该是release构建出来的，不要混用</li>
+<li>Debug配置构建出来的应用性能会比Release构建出来的性能相差巨大，甚至差高达10倍以上，因此请不要在Debug中过早地考虑性能优化问题</li>
+<li>Debug配置与Release配置出来的库如果进行混用的话，可能会出现各种莫名奇怪的问题，也可能运行正常，有问题时请检查配置匹配问题</li>
+</ul>
+
+<p>这些都是我在项目开发中出现问题时才学会的教训，在使用SeetaFaceEngine人脸识别库的过程中，因为在Debug配置中使用release出来的库，出现接口调用正常但是结果不正确的异常；更换成debug出来的库后，结果正常了，但是性能相差高达10倍以上，这给了我深刻的印象。</p>
+
+<p>关于构建平台的话，因为不同的平台二进制是不兼容的，因而不会出现混用而成功构建的问题。</p>
+
+<h3 id="头文件及链接库目录配置-no-such-file问题">头文件及链接库目录配置：No Such File问题</h3>
+
+<p>添加项目搜寻头文件和链接库目录的配置有两处位置可以实现，都在项目属性配置对话框中，一处是【VC++目录】：</p>
+
+<p><img src="https://wmatrix.github.io/img/vs/vc-directory.jpg" alt="vc-dir" /></p>
+
+<p>另一处是【C/C++ - 常规 - 附加包含目录】：</p>
+
+<p><img src="https://wmatrix.github.io/img/vs/include-addon.jpg" alt="include-addon" /></p>
+
+<p>和【连接器 - 常规 - 附加库目录】：</p>
+
+<p><img src="https://wmatrix.github.io/img/vs/libdir-addon.jpg" alt="libdir-addon" /></p>
+
+<h3 id="链接库文件-无法解析的符号问题">链接库文件：无法解析的符号问题</h3>
+
+<p>在项目构建中出现无法解析的符号问题时，要么是没有添加需要的库输入进行链接，要么就是对应的符号所在的源文件并未导入一起构建。你可以在【连接器 - 输入 - 附件依赖项】添加依赖库：</p>
+
+<p><img src="https://wmatrix.github.io/img/vs/libs-addon.jpg" alt="libs-addon" /></p>
+
+<p>注意Debug和Release配置对应的依赖库应该是不一样的，一般Debug的依赖库带有d标志，如opencv_core320d.dll，而Release对应的是opencv_core320.dll。</p>
+
+<h3 id="预编译头">预编译头</h3>
+
+<p>在VS中创建Windows控制台应用程序的项目时，会自动添加stdafx.h文件，当你的项目中都是标准的C/C++代码时，你可能会将该文件删除，但在生成时确发现失败了，提示如下错误：</p>
+
+<pre><code>fatal error C1010: 在查找预编译头时遇到意外的文件结尾，是否忘记向源中添加“#include &lt;stdafx.h&gt;&quot;
+</code></pre>
+
+<p>这是因为项目默认使用了VS预编译头技术来提高项目的编译速度，因而需要项目中的每一个源文件中都包含预编译头文件，而VS默认的预编译头文件就是stdafx.h。如果你不需要这一文件，可以通过下面的配置关闭，在
+[C/C++ - 预编译头]中修改：</p>
+
+<p><img src="https://wmatrix.github.io/img/vs/precompiled-header.jpg" alt="precompiled-header" /></p>
+
+<p>预编译头的基本原理是避免头文件内容的频繁复制，尤其是大文件的多次复制带来的生成时间损耗，通过一次预编译为pch文件来引用而提高编译速度。关于在VC++中使用预编译头可以可以参考<a href="https://www.cnblogs.com/findumars/p/7220084.html">VC++使用预编译头</a>.</p>
+
+<h3 id="配置类型-exe-or-dll-lib">配置类型：exe or dll/lib</h3>
+
+<p>在VS的新建项目选择对话框中并没有Windows动态库或者是静态库的项目类型，只有Windows控制台应用程序或者是桌面应用程序等类型，又或者是通用库，共享库的类型。其实对于windows下的dll或者是lib的项目目标，只需要在应用程序项目的属性中进行配置选择即可：</p>
+
+<p><img src="https://wmatrix.github.io/img/vs/target-type.jpg" alt="target-type" /></p>
+
+<p>支持生成文件，应用程序exe，动态库dll，静态库lib，实用工具等选项。</p>
+
+<h3 id="字符集-unicode">字符集：unicode</h3>
+
+<p>在项目中如果我们使用了中文等非英语之外的其他语言，需要设置对应的字符集才能正确地识别字符进行代码的编译。因此在VS中建议采用统一的unicode字符集，如上图所示的配置。
+可以选择使用多字节字符集和使用Unicode字符集。</p>
+
+<h2 id="bp-项目调试">BP-项目调试</h2>
+
+<p>项目调试的时间有时候可能是项目开发时间的一倍，因此提高项目的调试效率是非常实用的技能。可以在VS的项目属性 - 调试选项卡中配置相关的一些参数，你可以选择不同的调试器。</p>
+
+<h3 id="命令及命令行参数">命令及命令行参数</h3>
+
+<p>正常开发流程中，项目的调试命令都时项目本身的可执行程序，因而不需要修改命令变量。但是当开发是一个动态库或者静态库程序，提供给第三方使用开发后需要进行问题调试定位时，我们就需要修改命令变量了。
+由于库应用本身是无法执行的，从而需要使用外部的可执行程序来启动应用进行代码调用和调试。为了实现调试目的，需要进行如下配置：</p>
+
+<ol>
+<li>修改【配置属性 - 调试 - 命令】的值为需要进行调试的可执行文件路径位置，可执行文件应该是Debug配置构建。</li>
+<li>修改【配置属性 - 常规 - 常规 - 输出目录】的值，将当期项目（库）的输出文件覆盖掉可执行文件依赖使用的项目库文件，从而可以进行代码断点调试</li>
+</ol>
+
+<p>对于控制台应用程序，往往需要额外的命令行参数来进行有效执行和调试，因此需要配置好命令行参数才能正确地调试，你可以在【配置属性 - 调试 - 命令参数】中添加对应的命令行参数。</p>
+
+<h3 id="工作目录">工作目录</h3>
+
+<p>以前用VS做开发时，经常不清楚应用执行时的当前目录在哪里，从而为代码中使用的文件应该放在哪一路径下而头疼。现在发现原来调试执行时的工作目录是可以配置的：
+在【配置属性 - 调试 - 工作目录】选项中，可以浏览当前的工作目录位置，你也可以修改当前的工作目录路径从而避免拷贝文件，尤其是当使用的文件体积很大时。</p>
+
+<p>修改工作目录的用途主要有：</p>
+
+<ul>
+<li>使得读取配置文件，数据文件等文件更方便简单，在代码中我们经常使用的都时相对路径，而不是绝对路径的文件名，因而工作目录的配置就很有用</li>
+<li>使得应用依赖的动态库dll的搜索更方便简单，系统搜寻dll是在环境变量配置的路径下搜索的，而应用常常会需要依赖一些特定的dll，如果不愿修改系统环境变量，则可以放到工作目录下</li>
+</ul>
+
+<h3 id="应用程序无法正常启动-0xc000007b问题">应用程序无法正常启动：0xc000007b问题</h3>
+
+<p>VS项目中的依赖库输入使用的是lib文件，确保了应用可以正确地编译生成。在应用执行的时候，根据依赖的lib文件自动搜寻加载需要的dll动态库执行文件。如果无法在指定的路径中找到需要的dll文件，那么应用程序将无法正常启动，如果找到的dll文件不匹配或者依赖不满足，应用程序也无法正常启动。</p>
+
+<p>依据MSDN，Windows系统按照如下顺序搜寻DLL文件：</p>
+
+<ul>
+<li>当前可执行模块所在的目录</li>
+<li>当前目录（工作目录）</li>
+<li>Windows系统目录</li>
+<li>Windows目录</li>
+<li>PATH、path环境变量中列出的目录</li>
+</ul>
+
+<p>上面讲过可以通过修改【工作目录】来使系统找到需要的dll文件，下面还将讲我们也可以通过添加项目特定的【环境变量】来让系统找到需要的dll文件。</p>
+
+<p>放置项目使用的dll文件，以及配置dll路径的建议为：</p>
+
+<ul>
+<li>应该避免将开发中的dll文件放置到Windos系统目录或者Windows目录，造成管理混乱</li>
+<li>尽量避免频繁地更改系统级的Path环境变量来实现项目开发的调试目的，可能导致path的混乱和可执行文件及库的冲突</li>
+<li>优先选择修改【工作目录】或者是项目自身的【环境变量】的方法来实现开发dll的搜索使用</li>
+<li>如果依赖的dll文件不多，只有少数几个的情况下，可以考虑拷贝到可执行文件所在的目录下，这样最简单方便</li>
+</ul>
+
+<p>有的时候我们会在项目中使用第三方提供的dll文件，这是很普遍的情况，但是由于Windows系统中依赖的系统级dll文件很多，尤其是不同的VS版本开发出发的应用依赖的库文件可能是不同的，这里最显著的就是：</p>
+
+<ul>
+<li>msvcr库文件：msvcr100.dll, msvcr120.dll, msvcr140.dll以及他们的调试版本如msvcr140d.dll等等</li>
+<li>mscvp库文件：mscvp100.dll, msvcp120.dll, msvcp140.dll以及它们的调试版本如msvcp140d.dll等等</li>
+</ul>
+
+<p>这两个文件是与Visual Studio开发IDE的版本相关联的，往往使用不同版本开发生成的dll文件依赖的也是不同版本的dll文件，因此在发布和使用时，都必须带有对应的这些dll文件。这里的建议是：</p>
+
+<ul>
+<li>尽量在发布dll的时候将依赖的这些dll打包一起提供</li>
+<li>如果第三方的dll库文件中没有提供所需要的这些文件，那只能到MSDN等网站上去下载，或者是安装对应版本的VC++ Redistribute Runtime程序包环境</li>
+<li>一定要注意确保32bit和64bit文件的匹配问题，不同平台的dll文件与应用程序是无法正常使用的，可能会出现应用程序无法正常启动的0xc000007b问题</li>
+</ul>
+
+<p>这里提供一个用来下载Windows dll文件的网站：<a href="https://cn.dll-files.com/">dll-files</a>。</p>
+
+<h3 id="环境变量及合并">环境变量及合并</h3>
+
+<p>上面提到我们可以通过修改项目特定的环境变量来实现dll的搜寻，这也是建议的方法之一，可以尽量避免开发对系统环境的影响。</p>
+
+<p><img src="https://wmatrix.github.io/img/vs/env-var.jpg" alt="env-var" /></p>
+
+<p>环境变量的写法如：Path=D:\opencl, 与系统环境变量的一致。你可以定义独立的环境变量，也可以选择追加到现有的环境变量中，只需要确保：</p>
+
+<ul>
+<li>环境变量的名字与需要追加到的系统环境变量名字一致</li>
+<li>参数【合并环境】的值配置为【是】</li>
+</ul>
+
+<p>项目环境变量的配置给与开发调试更大的灵活性，在调试过程中非常有用，再也不用烦心DLL的搜寻问题了。</p>
+
+<h2 id="bp-开发插件">BP-开发插件</h2>
+
+<p>Visual Studio作为最强大的开发IDE之一，自然也是支持着非常多的强大插件，这些插件提供了额外的方便实用的功能，既有官方的也有第三方开发的，既有免费的也有收费的，因而已然是一个规模庞大的生态系统。甚至于很多知名公司的IDE就是完全基于VS来开发提供的，比如嵌入芯片厂商中Atmel Corp的Atmel Studio就是这样的一款IDE，这样既充分利用了VS的强大功能，又给与开发者熟悉的开发流程，一举多得。</p>
+
+<p>你可以在VS的菜单【工具 - 扩展和更新】中管理扩展和插件，包含查看已安装的扩展，是否有更新版本，搜索想要安装的扩展，卸载安装了的扩展等等。</p>
+
+<p><img src="https://wmatrix.github.io/img/vs/vs-extension.jpg" alt="vs-extension" /></p>
+
+<h3 id="vmicro-arduino开发插件">vMicro: Arduino开发插件</h3>
+
+<p>前段时间在使用VS进行物联网项目的开发，用到的是Arduino和ESP8266的平台及框架，幸好有vMicro插件的存在，让我可以继续使用VS的强大功能高效地完成工作。</p>
+
+<p>在【扩展和工具】中【联机】下搜索arduino既可以看到Arduino IDE的扩展插件，如上图，你可以直接进行安装使用，详细的使用说明，可以参考官网<a href="http://www.visualmicro.com/page/User-Guide.aspx?doc=Visual-Micro-Menu.html">arduino for Visual Studio</a>.</p>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://wmatrix.github.io/post/orangepi-pc-plus-note/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://wmatrix.github.io/post/orangepi-pc-plus-note/">Orangepi Pc Plus 研究笔记</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+  </div>
+</div>
+
+
+
+  
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+(function() {
+    
+    
+    if (window.location.hostname == "localhost")
+        return;
+
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    var disqus_shortname = 'Your Disqus shortname';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</div>
+
+</div>
+</div>
+<script src="https://wmatrix.github.io/js/ui.js"></script>
+
+
+
+
+
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="\/\/analytics.example.com\/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId',  2 ]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="//analytics.example.com/piwik.php?idsite=2" style="border:0;" alt="" /></p></noscript>
+
+
+
+</body>
+</html>
+
